@@ -49,17 +49,38 @@
             }
 
             table{
-                border: 2px solid black;
                 border-radius: 15px;
+                border-spacing: 0px;
             }
 
             th{
                 padding: 10px 5px 20px 5px;
             }
 
+            th, td{
+                border: 2px solid black;
+            }
+
+            th:first-child{
+                border-top-left-radius: 15px;
+            }
+
+            th:last-child{
+                border-top-right-radius: 15px;
+            }
+
+            tr:last-child>td:first-child{
+                border-bottom-left-radius: 15px;
+            }
+
+            tr:last-child>td:last-child{
+                border-bottom-right-radius: 15px;
+            }
+
             .cast{
-                width: 30%;
-                margin: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
 
             table{
@@ -78,92 +99,94 @@
             </ul>
         </div>
         <div class="cast">
-            <table>
-                <tr>
-                    <th colspan="2">Aktor</th>
-                    <th>Peran</th>
-                </tr>
-                <tr>
-                    <td><img src="https://i.pinimg.com/originals/8e/21/29/8e2129f44804db65316ed3db92cf8552.jpg" alt="Robert Downey Jr."></td>
-                    <td>Robert Downey Jr.</td>
-                    <td>Tony Stark / Iron Man</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Mark_Kassen%2C_Tony_C%C3%A1rdenas_and_Chris_Evans_%28cropped%29.jpg" alt="Chris Evans"></td>
-                    <td>Chris Evans</td>
-                    <td>Steve Rogers / Captain America</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Mark_Ruffalo_%2836201774756%29_%28cropped%29.jpg/1200px-Mark_Ruffalo_%2836201774756%29_%28cropped%29.jpg" alt="Mark Ruffalo"></td>
-                    <td>Mark Ruffalo</td>
-                    <td>Bruce Banner / Hulk</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Chris_Hemsworth_by_Gage_Skidmore_2_%28cropped%29.jpg" alt="Chris Hemsworth"></td>
-                    <td>Chris Hemsworth</td>
-                    <td>Thor</td>
-                </tr>
-                <tr>
-                    <td><img src="https://m.media-amazon.com/images/M/MV5BMTM3OTUwMDYwNl5BMl5BanBnXkFtZTcwNTUyNzc3Nw@@._V1_.jpg" alt="Scarlett Johansson"></td>
-                    <td>Scarlett Johansson</td>
-                    <td>Natasha Romanoff / Black Widow</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Jeremy_Renner_by_Gage_Skidmore.jpg" alt="Jeremy Renner"></td>
-                    <td>Jeremy Renner</td>
-                    <td>Clint Barton / Hawkeye</td>
-                </tr>
-                <tr>
-                    <td><img src="https://static.wikia.nocookie.net/disney/images/1/19/Don_Cheadle.jpg/revision/latest?cb=20190924222841" alt="Don Cheadle"></td>
-                    <td>Don Cheadle</td>
-                    <td>James Rhodes / War Machine</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Paul_Rudd_2_SDCC_2014.jpg/1200px-Paul_Rudd_2_SDCC_2014.jpg" alt="Paul Rudd"></td>
-                    <td>Paul Rudd</td>
-                    <td>Scott Lang / Ant-Man</td>
-                </tr>
-                <tr>
-                    <td><img src="https://api.time.com/wp-content/uploads/2015/01/benedict-cumberbatch.jpg" alt="Benedict Cumberbatch"></td>
-                    <td>Benedict Cumberbatch</td>
-                    <td>Doctor Strange</td>
-                </tr>
-                <tr>
-                    <td><img src="https://thepacepress.org/wp-content/uploads/2020/09/IMG_6245-648x900.jpg" alt="Chadwick Boseman"></td>
-                    <td>Chadwick Boseman</td>
-                    <td>T'Challa / Black Panther</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Tom_Holland_MTV_2018_%2801%29.jpg" alt="Tom Holland"></td>
-                    <td>Tom Holland</td>
-                    <td>Peter Parker / Spider-Man</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Josh_Brolin_SDCC_2014.jpg" alt="Josh Brolin"></td>
-                    <td>Josh Brolin</td>
-                    <td>Thanos</td>
-                </tr>
-                <tr>
-                    <td><img src="https://m.media-amazon.com/images/M/MV5BNzg3MTgwOTgzMV5BMl5BanBnXkFtZTgwODIxMTUwMjE@._V1_.jpg" alt="Chris Pratt"></td>
-                    <td>Chris Pratt</td>
-                    <td>Peter Quill / Star-Lord</td>
-                </tr>
-                <tr>
-                    <td><img src="data:image/jpeg;base64,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" alt="Tom Hiddleston"></td>
-                    <td>Tom Hiddleston</td>
-                    <td>Loki</td>
-                </tr>
-                <tr>
-                    <td><img src="https://m.media-amazon.com/images/M/MV5BMTQwMDQ0NDk1OV5BMl5BanBnXkFtZTcwNDcxOTExNg@@._V1_.jpg" alt="Karen Gillan"></td>
-                    <td>Karen Gillan</td>
-                    <td>Nebula</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Zoe_Saldana_%2828584925641%29_%28cropped_2%29.jpg" alt="Zoe Saldana"></td>
-                    <td>Zoe Saldana</td>
-                    <td>Gamora</td>
-                </tr>
-            </table>
+            <div class="table-cast">
+                <table>
+                    <tr>
+                        <th colspan="2">Aktor</th>
+                        <th>Peran</th>
+                    </tr>
+                    <tr>
+                        <td><img src="https://i.pinimg.com/originals/8e/21/29/8e2129f44804db65316ed3db92cf8552.jpg" alt="Robert Downey Jr."></td>
+                        <td>Robert Downey Jr.</td>
+                        <td>Tony Stark / Iron Man</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Mark_Kassen%2C_Tony_C%C3%A1rdenas_and_Chris_Evans_%28cropped%29.jpg" alt="Chris Evans"></td>
+                        <td>Chris Evans</td>
+                        <td>Steve Rogers / Captain America</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Mark_Ruffalo_%2836201774756%29_%28cropped%29.jpg/1200px-Mark_Ruffalo_%2836201774756%29_%28cropped%29.jpg" alt="Mark Ruffalo"></td>
+                        <td>Mark Ruffalo</td>
+                        <td>Bruce Banner / Hulk</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Chris_Hemsworth_by_Gage_Skidmore_2_%28cropped%29.jpg" alt="Chris Hemsworth"></td>
+                        <td>Chris Hemsworth</td>
+                        <td>Thor</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://m.media-amazon.com/images/M/MV5BMTM3OTUwMDYwNl5BMl5BanBnXkFtZTcwNTUyNzc3Nw@@._V1_.jpg" alt="Scarlett Johansson"></td>
+                        <td>Scarlett Johansson</td>
+                        <td>Natasha Romanoff / Black Widow</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Jeremy_Renner_by_Gage_Skidmore.jpg" alt="Jeremy Renner"></td>
+                        <td>Jeremy Renner</td>
+                        <td>Clint Barton / Hawkeye</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://static.wikia.nocookie.net/disney/images/1/19/Don_Cheadle.jpg/revision/latest?cb=20190924222841" alt="Don Cheadle"></td>
+                        <td>Don Cheadle</td>
+                        <td>James Rhodes / War Machine</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Paul_Rudd_2_SDCC_2014.jpg/1200px-Paul_Rudd_2_SDCC_2014.jpg" alt="Paul Rudd"></td>
+                        <td>Paul Rudd</td>
+                        <td>Scott Lang / Ant-Man</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://api.time.com/wp-content/uploads/2015/01/benedict-cumberbatch.jpg" alt="Benedict Cumberbatch"></td>
+                        <td>Benedict Cumberbatch</td>
+                        <td>Doctor Strange</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://thepacepress.org/wp-content/uploads/2020/09/IMG_6245-648x900.jpg" alt="Chadwick Boseman"></td>
+                        <td>Chadwick Boseman</td>
+                        <td>T'Challa / Black Panther</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Tom_Holland_MTV_2018_%2801%29.jpg" alt="Tom Holland"></td>
+                        <td>Tom Holland</td>
+                        <td>Peter Parker / Spider-Man</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Josh_Brolin_SDCC_2014.jpg" alt="Josh Brolin"></td>
+                        <td>Josh Brolin</td>
+                        <td>Thanos</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://m.media-amazon.com/images/M/MV5BNzg3MTgwOTgzMV5BMl5BanBnXkFtZTgwODIxMTUwMjE@._V1_.jpg" alt="Chris Pratt"></td>
+                        <td>Chris Pratt</td>
+                        <td>Peter Quill / Star-Lord</td>
+                    </tr>
+                    <tr>
+                        <td><img src="data:image/jpeg;base64,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" alt="Tom Hiddleston"></td>
+                        <td>Tom Hiddleston</td>
+                        <td>Loki</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://m.media-amazon.com/images/M/MV5BMTQwMDQ0NDk1OV5BMl5BanBnXkFtZTcwNDcxOTExNg@@._V1_.jpg" alt="Karen Gillan"></td>
+                        <td>Karen Gillan</td>
+                        <td>Nebula</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Zoe_Saldana_%2828584925641%29_%28cropped_2%29.jpg" alt="Zoe Saldana"></td>
+                        <td>Zoe Saldana</td>
+                        <td>Gamora</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>
